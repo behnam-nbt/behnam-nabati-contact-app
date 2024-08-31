@@ -1,0 +1,365 @@
+.container {
+    max-width: 1500px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.title {
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #6c5ce7;
+}
+
+.title p {
+    font-size: 1rem;
+    color: #c7c7c7;
+}
+
+.startTask {
+    margin-top: 2rem;
+    background: linear-gradient(90deg, #181818, #232323 35%, #2c2c2c);
+    box-shadow: #0000001f 0 1px 3px, #0000003d 0 1px 2px;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.startTask h1 {
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+.startTask p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #c7c7c7;
+}
+
+.startTask button {
+    margin: 2rem auto 0 auto;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    color: #FFF;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+/* .inputContainer {
+    margin-top: 3rem;
+    width: 800px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    padding: 2rem;
+    background: linear-gradient(90deg, #181818, #232323 35%, #2c2c2c);
+    border-radius: 1rem;
+} */
+
+.container {
+    position: relative;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    width: 800px;
+    background: linear-gradient(90deg, #181818, #232323 35%, #2c2c2c);
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.closeModal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #FFF;
+}
+
+.inputContainer {
+    margin-top: 0;
+    width: 100%;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+}
+
+
+.inputContainer label {
+    font-size: 1rem;
+    color: #c7c7c7;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.inputContainer input {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #2c2c2c;
+    color: #FFF;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.jobList {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    padding: 1rem;
+    background: linear-gradient(90deg, #181818, #232323 35%, #2c2c2c);
+    border-radius: 1rem;
+    color: #c7c7c7;
+}
+
+.jobList option {
+    background-color: #2c2c2c;
+    color: #FFF;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.inputContainer button {
+    margin-top: 2rem;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    color: #FFF;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    width: 100%;
+    padding: 1rem;
+}
+
+.inputContainer button:hover {
+    background-color: #6c5ce7;
+}
+
+.contactListContainer {
+    margin-top: 3rem;
+    width: 80%;
+}
+
+.contactList {
+    width: 100%;
+    padding: 2rem;
+    border-collapse: collapse;
+    margin: 1.5rem auto 0 auto;
+    background-color: #2c2c2c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.contactList table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background-color: #2c2c2c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.contactList th,
+.contactList td {
+    padding: 1rem;
+    text-align: left;
+    color: #f1f1f1;
+}
+
+.contactList th {
+    background-color: #181818;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.contactList tr:nth-child(even) {
+    background-color: #242424;
+}
+
+.contactList tr:nth-child(odd) {
+    background-color: #2c2c2c;
+}
+
+.contactList tr:hover {
+    background-color: #3a3a3a;
+}
+
+.contactList th:first-child,
+.contactList td:first-child {
+    padding-left: 1.5rem;
+}
+
+.contactList th:last-child,
+.contactList td:last-child {
+    padding-right: 1.5rem;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+}
+
+.contactBtn {
+    background-color: #6c5ce7;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    padding: 0.7rem 1rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s;
+    display: inline;
+    margin-right: 2rem;
+}
+
+.contactBtn:hover {
+    background-color: #7d6df5;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.resetBtn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    padding: 0.7rem 1rem;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: background-color 0.5s;
+}
+
+.resetBtn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.filteredBtn {
+    background-color: #6c5ce7;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    padding: 0.7rem 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s;
+    display: inline;
+    margin-right: 2rem;
+}
+
+.filteredBtn:hover {
+    background-color: #7d6df5;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.searchContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchIconBtn {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 1rem;
+    color: #fff;
+}
+
+.searchInput {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: width 0.3s ease;
+    width: 200px;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 5px rgba(26, 115, 232, 0.5);
+}
+.deleteBtn {
+    background-color: #ff3b30;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    padding: 0.4rem 1rem;
+    margin-left: 0.5rem;
+    transition: transform 0.3s;
+    display: inline;
+    margin-right: 2rem;
+}
+
+.editBtn {
+    background-color: #00cf45;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    padding: 0.4rem 1rem;
+    transition: transform 0.3s;
+    display: inline;
+}
