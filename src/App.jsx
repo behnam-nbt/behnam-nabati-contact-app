@@ -1,9 +1,13 @@
 import MainContent from "./components/MainContent"
+import { ContactProvider } from "./context/contactContext"
+
 
 function App() {
 
   return (
-    <MainContent />
+    <ContactProvider>
+      <MainContent />
+    </ContactProvider>
   )
 }
 

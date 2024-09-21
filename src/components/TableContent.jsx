@@ -1,12 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import styles from './MainContent.module.css';
 import DeleteAllConfirmationModal from './DeleteAllConfirmationModal';
 import DeleteConfirmationModal from './DeleteConfirmationModal';
 import ContactForm from './ContactForm';
 import { CiSearch } from "react-icons/ci";
 import { toast } from 'react-toastify';
+import { ContactContext } from '../context/contactContext';
 
-function TableContent({ contacts, setContacts }) {
+function TableContent() {
+    const { contacts, setContacts } = useContext(ContactContext); // Use context to get contacts and setContacts
+
     const [filteredContacts, setFilteredContacts] = useState(contacts);
     const [search, setSearch] = useState('');
     const [isSearchActive, setIsSearchActive] = useState(false);

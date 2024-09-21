@@ -1,27 +1,26 @@
-import { useState, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styles from './MainContent.module.css';
 import { CiCirclePlus } from "react-icons/ci";
 import TableContent from './TableContent';
 import ContactForm from './ContactForm';
+import { ContactContext } from '../context/contactContext';
 
 function MainContent() {
+  const { contacts, setContacts, isModalOpen, setIsModalOpen, isEditing, setIsEditing, currentEditIndex, setCurrentEditIndex } = useContext(ContactContext);
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [profession, setProfession] = useState('student');
-  const [contacts, setContacts] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isEditing, setIsEditing] = useState(false);
-  const [currentEditIndex, setCurrentEditIndex] = useState(null);
 
   useEffect(() => {
     const savedContacts = localStorage.getItem('contacts');
     if (savedContacts) {
       setContacts(JSON.parse(savedContacts));
     }
-  }, []);
+  }, [setContacts]);
 
   useEffect(() => {
     if (contacts.length > 0) {
